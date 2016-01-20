@@ -1,0 +1,12 @@
+# Minified scripts:
+*.min.css
+*.min.js
+
+# Adobe CS files:
+*.ai
+*.fla
+*.indd
+*.psd
+
+# Underscore-prefixed:
+_*
