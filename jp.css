@@ -3,8 +3,9 @@
     font-family: 'Istok Web';
     font-style: normal;
     font-weight: 700;
-    src: url('fonts/istok-bold-webfont.woff2') format('woff2'),
-         url('fonts/istok-bold-webfont.woff') format('woff');
+    src:
+        url('fonts/istok-bold-webfont.woff2') format('woff2'),
+        url('fonts/istok-bold-webfont.woff') format('woff');
     unicode-range: U+0020-007F, U+00A9; /* Basic Latin, Copyright Symbol */
 }
 @keyframes fadein-splash {
@@ -43,13 +44,24 @@
 }
 *,
 *::before,
-*::after { /* csslint allow: universal-selector */
+*::after {
     box-sizing: border-box;
 }
-html, body, div, span, h1, h2, h3, p, a, sup, ul, li {
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+sup,
+ul,
+li {
     border: 0;
-    font-size: 100%;
     font: inherit;
+    font-size: 100%;
     margin: 0;
     padding: 0;
     vertical-align: baseline;
