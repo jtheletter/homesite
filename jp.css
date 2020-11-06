@@ -8,50 +8,20 @@
         url('fonts/istok-bold-webfont.woff') format('woff');
     unicode-range: U+0020-007F, U+00A9; /* Basic Latin, Copyright Symbol */
 }
-@keyframes fadein-splash {
+@keyframes fade-1 {
     0% { opacity: 0; }
-    60% { opacity: 1; }
+    50% { opacity: 1; }
     100% { opacity: 1; }
 }
-@keyframes fadein-title {
+@keyframes fade-2 {
     0% { opacity: 0; }
-    20% { opacity: 0; }
-    70% { opacity: 1; }
-    100% { opacity: 1; }
-}
-@keyframes fadein-soc-1 {
-    0% { opacity: 0; }
-    40% { opacity: 0; }
-    70% { opacity: 1; }
-    100% { opacity: 1; }
-}
-@keyframes fadein-soc-2 {
-    0% { opacity: 0; }
-    42.5% { opacity: 0; }
+    25% { opacity: 0; }
     75% { opacity: 1; }
     100% { opacity: 1; }
 }
-@keyframes fadein-soc-3 {
-    0% { opacity: 0; }
-    47.5% { opacity: 0; }
-    85% { opacity: 1; }
-    100% { opacity: 1; }
-}
-@keyframes fadein-soc-4 {
+@keyframes fade-3 {
     0% { opacity: 0; }
     50% { opacity: 0; }
-    90% { opacity: 1; }
-    100% { opacity: 1; }
-}
-@keyframes fadein-subtitle {
-    0% { opacity: 0; }
-    65% { opacity: 0; }
-    95% { opacity: 1; }
-    100% { opacity: 1; }
-}
-@keyframes fadein-copyright {
-    0% { opacity: 0; }
-    80% { opacity: 0; }
     100% { opacity: 1; }
 }
 *,
@@ -82,7 +52,7 @@ body {
     background-color: #332e2a;
     color: #efe0d1;
     font-family: 'Istok Web', Helvetica, Arial, sans-serif;
-    line-height: 1;
+    line-height: 1.5;
     text-align: center;
     -o-user-select: none;
     -ms-user-select: none;
@@ -92,7 +62,7 @@ body {
 }
 h1 {
     font-size: 48px;
-    line-height: 36px;
+    line-height: 1.2;
 }
 h2 {
     font-size: 21px;
@@ -165,6 +135,7 @@ li {
 .content {
     display: inline-block;
     font-size: 1rem;
+    padding: 0 1rem;
     vertical-align: middle;
     width: 100%;
 }
@@ -181,27 +152,12 @@ li {
 .svg-anchor:active path {
     fill: #e8a25d;
 }
-.splash {
-    animation: 3s fadein-splash;
+.fade-1 {
+    animation: 5s fade-1;
 }
-.title {
-    animation: 3s fadein-title;
+.fade-2 {
+    animation: 5s fade-2;
 }
-.soc-1 {
-    animation: 3s fadein-soc-1;
-}
-.soc-2 {
-    animation: 3s fadein-soc-2;
-}
-.soc-3 {
-    animation: 3s fadein-soc-3;
-}
-.soc-4 {
-    animation: 3s fadein-soc-4;
-}
-.subtitle {
-    animation: 3s fadein-subtitle;
-}
-.copyright {
-    animation: 3s fadein-copyright;
+.fade-3 {
+    animation: 5s fade-3;
 }
