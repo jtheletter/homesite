@@ -1,12 +1,18 @@
-# Minified scripts:
-*.min.css
-*.min.js
+# MacOS Desktop Services Store:
+.DS_Store
 
-# Adobe CS files:
+# Microsoft Temporary Files:
+~$*.xlsx
+
+# Minified:
+*.min.*
+
+# Prefixed Double-Underscore:
+__*
+
+# Raw Art:
+*.afphoto
 *.ai
 *.fla
 *.indd
 *.psd
-
-# Underscore-prefixed:
-_*
