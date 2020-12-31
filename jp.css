@@ -8,6 +8,15 @@
         url('fonts/istok-bold-webfont.woff') format('woff');
     unicode-range: U+0020-007F, U+00A9; /* Basic Latin, Copyright Symbol */
 }
+@font-face {
+    font-family: 'Istok Web';
+    font-style: normal;
+    font-weight: 400;
+    src:
+        url('fonts/istok-regular-webfont.woff2') format('woff2'),
+        url('fonts/istok-regular-webfont.woff') format('woff');
+    unicode-range: U+0020-007F, U+00A9; /* Basic Latin, Copyright Symbol */
+}
 @keyframes fade-1 {
     0% { opacity: 0; }
     50% { opacity: 1; }
@@ -29,18 +38,18 @@
 *::after {
     box-sizing: border-box;
 }
-html,
+a,
 body,
 div,
-span,
 h1,
 h2,
 h3,
+html,
+li,
 p,
-a,
+span,
 sup,
-ul,
-li {
+ul {
     border: 0;
     font: inherit;
     font-size: 100%;
@@ -48,37 +57,11 @@ li {
     padding: 0;
     vertical-align: baseline;
 }
-body {
-    background-color: #332e2a;
-    color: #efe0d1;
-    font-family: 'Istok Web', Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    text-align: center;
-    -o-user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-}
-h1 {
-    font-size: 48px;
-    line-height: 1.2;
-}
-h2 {
-    font-size: 21px;
-}
-h3 {
-    font-size: 12px;
-}
-sup {
-    font-size: 0.5em;
-    vertical-align: super;
-}
 a,
 a:link,
 a:visited {
-    color: #d8b28d;
     -webkit-tap-highlight-color: rgba(232, 162, 93, 0.5);
+    color: #d8b28d;
     tap-highlight-color: rgba(232, 162, 93, 0.5);
     text-decoration: none;
     transition: color 0.125s;
@@ -87,13 +70,42 @@ a:hover,
 a:active {
     color: #e8a25d;
 }
-ul {
-    font-size: 0;
-    list-style: none;
+body {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    background-color: #332e2a;
+    color: #efe0d1;
+    font-family: 'Istok Web', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    user-select: none;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+html {
+    font-size: 20px;
+    font-weight: 400;
 }
 li {
     display: inline-block;
-    margin: auto 8px;
+    font-size: 1rem;
+    margin: 0.125rem 0.5rem;
+}
+section > * {
+    margin: 0.75rem auto;
+}
+sup {
+    font-size: 50%;
+    vertical-align: super;
+}
+ul {
+    font-size: 0;
+    list-style: none;
 }
 .bg {
     background-image: url('images/icon-pattern.svg');
@@ -103,7 +115,7 @@ li {
     filter: blur(2px);
     left: 0;
     opacity: 0.1;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
 }
@@ -115,6 +127,16 @@ li {
     position: absolute;
     right: 25%;
     top: 0;
+}
+.content {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0 2rem;
+    vertical-align: middle;
+    width: 100%;
+}
+.content > * {
+    margin: 1.5rem auto;
 }
 .content-parent {
     bottom: 0;
@@ -132,15 +154,17 @@ li {
     height: 100%;
     vertical-align: middle;
 }
-.content {
-    display: inline-block;
-    font-size: 1rem;
-    padding: 0 1rem;
-    vertical-align: middle;
-    width: 100%;
+.fade-1 {
+    animation: 5s fade-1;
 }
-.content > * {
-    margin: 20px auto;
+.fade-2 {
+    animation: 5s fade-2;
+}
+.fade-3 {
+    animation: 5s fade-3;
+}
+.splash > svg {
+    margin-top: 0.5rem;
 }
 .svg-anchor {
     display: inline-block;
@@ -151,13 +175,4 @@ li {
 .svg-anchor:hover path,
 .svg-anchor:active path {
     fill: #e8a25d;
-}
-.fade-1 {
-    animation: 5s fade-1;
-}
-.fade-2 {
-    animation: 5s fade-2;
-}
-.fade-3 {
-    animation: 5s fade-3;
 }
