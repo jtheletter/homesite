@@ -88,16 +88,11 @@ a:active {
     color: #e8a25d;
 }
 body {
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    -webkit-user-select: none;
     background-color: #332e2a;
     color: #efe0d1;
     font-family: 'Istok Web', Helvetica, Arial, sans-serif;
     line-height: 1.5;
     text-align: center;
-    user-select: none;
 }
 h1 {
     font-size: 2rem;
@@ -172,22 +167,22 @@ ul {
     vertical-align: middle;
 }
 .fade-1 {
-    animation: 3s fade-1;
+    animation: 2s fade-1;
 }
 .fade-2 {
-    animation: 3s fade-2;
+    animation: 2s fade-2;
 }
 .fade-3 {
-    animation: 3s fade-3;
+    animation: 2s fade-3;
 }
 .fade-4 {
-    animation: 3s fade-4;
+    animation: 2s fade-4;
 }
 .fade-5 {
-    animation: 3s fade-5;
+    animation: 2s fade-5;
 }
 .fade-6 {
-    animation: 3s fade-6;
+    animation: 2s fade-6;
 }
 .splash > svg {
     margin-top: 0.5rem;
