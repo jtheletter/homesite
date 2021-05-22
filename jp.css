@@ -79,6 +79,7 @@ a:link,
 a:visited {
     -webkit-tap-highlight-color: rgba(232, 162, 93, 0.5);
     color: #d8b28d;
+    padding: 0 0.3333rem;
     tap-highlight-color: rgba(232, 162, 93, 0.5);
     text-decoration: none;
     transition: color 0.125s;
@@ -91,13 +92,13 @@ body {
     background-color: #332e2a;
     color: #efe0d1;
     font-family: 'Istok Web', Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.6667;
     text-align: center;
 }
 h1 {
     font-size: 2rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1;
 }
 html {
     font-size: 20px;
@@ -106,7 +107,8 @@ html {
 li {
     display: inline-block;
     font-size: 1rem;
-    margin: 0.125rem 0.5rem;
+    line-height: 1;
+    margin: 0.5rem 0.3333rem;
 }
 section > * {
     margin: 0.75rem auto;
