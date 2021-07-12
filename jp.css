@@ -1,0 +1,157 @@
+@charset 'UTF-8';
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* End reset. */
+
+@font-face {
+    font-family: 'Istok Web';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/istok-bold-webfont.woff2') format('woff2'),
+         url('fonts/istok-bold-webfont.woff') format('woff');
+    unicode-range: U+0020-007F, U+00A0-00FF, U+2000-206F; /* Basic Latin, Latin-1 Supplement, General Punctuation */
+}
+*,
+*::before,
+*::after { /* csslint allow: universal-selector */
+    box-sizing: border-box;
+}
+body {
+    background-color: #332e2a;
+    color: #efe0d1;
+    font-family: 'Istok Web', Helvetica, Arial, sans-serif;
+    min-width: 320px;
+    text-align: center;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+h1 { /* Name, Code Numbers */
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 36px;
+}
+h4 { /* Email, Code Text */
+    font-size: 21px;
+    font-weight: 700;
+}
+h6 { /* Copyright */
+    font-size: 14px;
+}
+sup {
+    font-size: 0.5em;
+    vertical-align: super;
+}
+a,
+a:link,
+a:visited {
+    color: #d8b28d;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+a:hover,
+a:active {
+    color: #e8a25d;
+}
+ul {
+    font-size: 0;
+}
+li {
+    display: inline-block;
+    margin: auto 8px;
+}
+.content-parent {
+    bottom: 0;
+    font-size: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+.content-parent::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.content {
+    display: inline-block;
+    font-size: 1rem;
+    vertical-align: middle;
+    width: 100%;
+}
+.content > * {
+    margin: 20px auto;
+}
+.svg-anchor {
+    display: inline-block;
+}
+.svg-anchor path {
+    transition: fill 0.25s;
+}
+.svg-anchor:hover path,
+.svg-anchor:active path {
+    fill: #e8a25d;
+}
+.fade {
+    opacity: 0;
+    transition-property: opacity;
+}
+.loaded .fade {
+    opacity: 1;
+}
+.splash {
+    transition-duration: 2s;
+}
+.title {
+    transition-duration: 2.5s;
+}
+.soc-1 {
+    transition-duration: 3.5s;
+}
+.soc-2 {
+    transition-duration: 3.75s;
+}
+.soc-3 {
+    transition-duration: 4s;
+}
+.subtitle {
+    transition-duration: 5s;
+}
+.copyright {
+    transition-duration: 5.25s;
+}
