@@ -1,56 +1,64 @@
 @charset 'UTF-8';
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-/* End reset. */
-
 @font-face {
     font-family: 'Istok Web';
     font-style: normal;
     font-weight: 700;
     src: url('fonts/istok-bold-webfont.woff2') format('woff2'),
          url('fonts/istok-bold-webfont.woff') format('woff');
-    unicode-range: U+0020-007F, U+00A0-00FF, U+2000-206F; /* Basic Latin, Latin-1 Supplement, General Punctuation */
+    unicode-range: U+0020-007F, U+00A9; /* Basic Latin, Copyright Symbol */
+}
+@keyframes fadein-splash {
+    0% { opacity: 0; }
+    60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes fadein-title {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes fadein-soc-1 {
+    0% { opacity: 0; }
+    40% { opacity: 0; }
+    70% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes fadein-soc-2 {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    80% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes fadein-subtitle {
+    0% { opacity: 0; }
+    65% { opacity: 0; }
+    90% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes fadein-copyright {
+    0% { opacity: 0; }
+    75% { opacity: 0; }
+    100% { opacity: 1; }
 }
 *,
 *::before,
 *::after { /* csslint allow: universal-selector */
     box-sizing: border-box;
 }
+html, body, div, span, h1, h2, h3, p, a, sup, ul, li {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
 body {
     background-color: #332e2a;
     color: #efe0d1;
     font-family: 'Istok Web', Helvetica, Arial, sans-serif;
+    line-height: 1;
     min-width: 320px;
     text-align: center;
     -o-user-select: none;
@@ -59,17 +67,15 @@ body {
     -webkit-user-select: none;
     user-select: none;
 }
-h1 { /* Name, Code Numbers */
+h1 {
     font-size: 48px;
-    font-weight: 700;
     line-height: 36px;
 }
-h4 { /* Email, Code Text */
+h2 {
     font-size: 21px;
-    font-weight: 700;
 }
-h6 { /* Copyright */
-    font-size: 14px;
+h3 {
+    font-size: 12px;
 }
 sup {
     font-size: 0.5em;
@@ -79,8 +85,10 @@ a,
 a:link,
 a:visited {
     color: #d8b28d;
+    -webkit-tap-highlight-color: rgba(232, 162, 93, 0.5);
+    tap-highlight-color: rgba(232, 162, 93, 0.5);
     text-decoration: none;
-    transition: color 0.25s;
+    transition: color 0.125s;
 }
 a:hover,
 a:active {
@@ -88,10 +96,32 @@ a:active {
 }
 ul {
     font-size: 0;
+    list-style: none;
 }
 li {
     display: inline-block;
     margin: auto 8px;
+}
+.bg {
+    background-image: url('images/icon-pattern.svg');
+    background-position: 0 0;
+    background-size: 64px 64px;
+    bottom: 0;
+    filter: blur(2px);
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.bg::before {
+    background-image: radial-gradient(rgba(51, 46, 42, 1), rgba(51, 46, 42, 0));
+    bottom: 0;
+    content: '';
+    left: 25%;
+    position: absolute;
+    right: 25%;
+    top: 0;
 }
 .content-parent {
     bottom: 0;
@@ -121,37 +151,27 @@ li {
     display: inline-block;
 }
 .svg-anchor path {
-    transition: fill 0.25s;
+    transition: fill 0.125s;
 }
 .svg-anchor:hover path,
 .svg-anchor:active path {
     fill: #e8a25d;
 }
-.fade {
-    opacity: 0;
-    transition-property: opacity;
-}
-.loaded .fade {
-    opacity: 1;
-}
 .splash {
-    transition-duration: 2s;
+    animation: 3s fadein-splash;
 }
 .title {
-    transition-duration: 2.5s;
+    animation: 3s fadein-title;
 }
 .soc-1 {
-    transition-duration: 3.5s;
+    animation: 3s fadein-soc-1;
 }
 .soc-2 {
-    transition-duration: 3.75s;
-}
-.soc-3 {
-    transition-duration: 4s;
+    animation: 3s fadein-soc-2;
 }
 .subtitle {
-    transition-duration: 5s;
+    animation: 3s fadein-subtitle;
 }
 .copyright {
-    transition-duration: 5.25s;
+    animation: 3s fadein-copyright;
 }
