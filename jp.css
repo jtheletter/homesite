@@ -27,19 +27,31 @@
 }
 @keyframes fadein-soc-2 {
     0% { opacity: 0; }
+    42.5% { opacity: 0; }
+    75% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes fadein-soc-3 {
+    0% { opacity: 0; }
+    47.5% { opacity: 0; }
+    85% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes fadein-soc-4 {
+    0% { opacity: 0; }
     50% { opacity: 0; }
-    80% { opacity: 1; }
+    90% { opacity: 1; }
     100% { opacity: 1; }
 }
 @keyframes fadein-subtitle {
     0% { opacity: 0; }
     65% { opacity: 0; }
-    90% { opacity: 1; }
+    95% { opacity: 1; }
     100% { opacity: 1; }
 }
 @keyframes fadein-copyright {
     0% { opacity: 0; }
-    75% { opacity: 0; }
+    80% { opacity: 0; }
     100% { opacity: 1; }
 }
 *,
@@ -71,7 +83,6 @@ body {
     color: #efe0d1;
     font-family: 'Istok Web', Helvetica, Arial, sans-serif;
     line-height: 1;
-    min-width: 320px;
     text-align: center;
     -o-user-select: none;
     -ms-user-select: none;
@@ -139,6 +150,7 @@ li {
     bottom: 0;
     font-size: 0;
     left: 0;
+    min-width: 320px;
     position: absolute;
     right: 0;
     text-align: center;
@@ -180,6 +192,12 @@ li {
 }
 .soc-2 {
     animation: 3s fadein-soc-2;
+}
+.soc-3 {
+    animation: 3s fadein-soc-3;
+}
+.soc-4 {
+    animation: 3s fadein-soc-4;
 }
 .subtitle {
     animation: 3s fadein-subtitle;
