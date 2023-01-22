@@ -100,6 +100,11 @@ h1 {
     font-weight: 700;
     line-height: 1;
 }
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
 html {
     font-size: 20px;
     font-weight: 400;
@@ -107,7 +112,7 @@ html {
 li {
     display: inline-block;
     font-size: 1rem;
-    line-height: 1;
+    line-height: 1.125;
     margin: 0.5rem 0.3333rem;
 }
 section > * {
