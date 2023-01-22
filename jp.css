@@ -79,6 +79,8 @@ a:link,
 a:visited {
     -webkit-tap-highlight-color: rgba(232, 162, 93, 0.5);
     color: #d8b28d;
+    font-size: 1rem;
+    font-weight: 700;
     padding: 0 0.3333rem;
     tap-highlight-color: rgba(232, 162, 93, 0.5);
     text-decoration: none;
@@ -111,12 +113,15 @@ html {
 }
 li {
     display: inline-block;
-    font-size: 1rem;
     line-height: 1.125;
     margin: 0.5rem 0.3333rem;
 }
 section > * {
     margin: 0.75rem auto;
+}
+span {
+    font-size: 0.9rem;
+    padding: 0 0.3333rem;
 }
 sup {
     font-size: 50%;
@@ -125,6 +130,9 @@ sup {
 ul {
     font-size: 0;
     list-style: none;
+}
+ul ~ ul {
+    margin-top: -0.5rem;
 }
 .bg {
     background-image: url('images/icon-pattern.svg');
