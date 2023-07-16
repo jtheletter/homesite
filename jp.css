@@ -86,7 +86,6 @@ a:visited {
     text-decoration: none;
     transition: color 0.125s;
 }
-a:hover,
 a:active {
     color: #e8a25d;
 }
@@ -145,6 +144,7 @@ ul ~ ul {
     position: fixed;
     right: 0;
     top: 0;
+    z-index: -9999;
 }
 .bg::before {
     background-image: radial-gradient(rgba(51, 46, 42, 1), rgba(51, 46, 42, 0));
@@ -208,7 +208,15 @@ ul ~ ul {
 .svg-anchor path {
     transition: fill 0.125s;
 }
-.svg-anchor:hover path,
 .svg-anchor:active path {
     fill: #e8a25d;
+}
+@media (hover: hover) { /* Focus/hover states for desktop only. */
+    a:focus,
+    a:hover {
+        color: #e8a25d;
+    }
+    .svg-anchor:hover path {
+        fill: #e8a25d;
+    }
 }

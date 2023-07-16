@@ -7,8 +7,8 @@
 # Minified:
 *.min.*
 
-# Prefixed Double-Underscore:
-__*
+# Prefixed Underscore:
+_*
 
 # Raw Art:
 *.afphoto

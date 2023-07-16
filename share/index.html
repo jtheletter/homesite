@@ -1,0 +1,70 @@
+<!-- htmlhint attr-lowercase: false, tagname-lowercase: false -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Speak Friend and Enter</title>
+
+        <!-- Base appearance. -->
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-navbutton-color" content="#332e2a">
+
+        <!-- Favicons. -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#332e2a">
+        <meta name="msapplication-TileColor" content="#332e2a">
+        <meta name="theme-color" content="#332e2a">
+
+        <!-- SEO & share. -->
+        <meta name="robots" content="noindex, nofollow">
+
+        <!-- Styles & scripts. -->
+        <link href="../jp.css" rel="stylesheet" type="text/css">
+        <link href="share.css" rel="stylesheet" type="text/css">
+        <script src="share.js"></script>
+
+        <!-- Analytics. -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCV8DS4CG1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SCV8DS4CG1');
+        </script>
+
+    </head>
+    <body id="top">
+        <div class="bg"></div>
+
+        <main>
+            <a class="scroll-anchor to-bottom" href="#bottom" title="Go">⧨ Scroll to Bottom of Page ⧩</a>
+            <ul class="grid-wrap" id="grid-wrap"></ul>
+            <a class="download-button" download="photos.zip" href="photos.zip" title="Download All" type="application/zip">Download All</a>
+            <a class="scroll-anchor to-top" href="#top" id="bottom" title="Go">◭ Scroll to Top of Page ◮</a>
+        </main>
+
+        <div class="lightbox-wrap" id="lightbox-wrap">
+            <div class="lightbox-curtain" id="lightbox-curtain"></div>
+            <button class="lightbox-button lightbox-button-exit" id="lightbox-button-exit" title="Exit">
+                <svg viewBox="0 0 1024 1024" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path d="M783.53 783.53c18.732-18.733 18.73-49.151 0-67.883L308.352 240.471c-18.732-18.732-49.15-18.732-67.882 0-18.733 18.733-18.732 49.15 0 67.883L715.647 783.53c18.731 18.73 49.15 18.732 67.882 0z"/><path d="M240.47 783.53c18.734 18.732 49.152 18.73 67.883 0L783.53 308.354c18.732-18.733 18.733-49.15 0-67.883-18.733-18.732-49.15-18.732-67.882 0L240.47 715.647c-18.731 18.732-18.733 49.15 0 67.883z"/></svg>
+                <small>Exit</small>
+            </button>
+            <button class="lightbox-button lightbox-button-prev" id="lightbox-button-prev" title="Previous">
+                <svg viewBox="0 0 1024 1024" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path d="M183.903 478.064c-18.733 18.732-18.731 49.15 0 67.882l294.156 294.156c18.733 18.733 49.15 18.733 67.883 0 18.732-18.732 18.732-49.15 0-67.882L251.785 478.064c-18.731-18.732-49.15-18.733-67.882 0z"/><path d="M545.942 183.907c-18.733-18.733-49.151-18.731-67.883 0L183.903 478.064c-18.733 18.732-18.733 49.15 0 67.882 18.733 18.733 49.15 18.733 67.882 0l294.157-294.157c18.73-18.73 18.732-49.15 0-67.882z"/><path d="M217.844 579.887l-67.882-67.882 67.882-67.883 67.882 67.883z"/></svg>
+                <small>Previous</small>
+            </button>
+            <button class="lightbox-button lightbox-button-next" id="lightbox-button-next" title="Next">
+                <svg viewBox="0 0 1024 1024" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path d="M478.058 840.098c18.733 18.733 49.151 18.731 67.883 0L840.097 545.94c18.733-18.732 18.733-49.15 0-67.882-18.733-18.733-49.15-18.733-67.882 0L478.058 772.216c-18.73 18.73-18.732 49.15 0 67.882z"/><path d="M840.097 545.941c18.733-18.732 18.731-49.15 0-67.882L545.941 183.903c-18.733-18.733-49.15-18.733-67.883 0-18.732 18.732-18.732 49.15 0 67.882L772.215 545.94c18.731 18.732 49.15 18.733 67.882 0z"/><path d="M874.038 512l-67.882 67.883L738.274 512l67.882-67.882z"/></svg>
+                <small>Next</small>
+            </button>
+            <ul class="lightbox-list" id="lightbox-list"></ul>
+        </div>
+
+    </body>
+</html>
