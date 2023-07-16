@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Swatches</title>
+        <link href="jp.css" rel="stylesheet" type="text/css">
+        <style>
+            .swatch {
+                display: inline-block;
+                font-weight: lighter;
+                height: 75px;
+                line-height: 75px;
+                margin: 5px;
+                text-align: center;
+                text-transform: uppercase;
+                width: 75px;
+            }
+            .swatch > span {
+                filter: invert(50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg"></div>
+        <div>
+            <div class="swatch" style="background-color: #332e2a"><span>332e2a</span></div>
+            <div class="swatch" style="background-color: #d8b28d"><span>d8b28d</span></div>
+            <div class="swatch" style="background-color: #e8a25d"><span>e8a25d</span></div>
+            <div class="swatch" style="background-color: #efe0d1"><span>efe0d1</span></div>
+        </div>
+    </body>
+</html>
