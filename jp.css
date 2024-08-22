@@ -113,7 +113,7 @@ html {
 li {
     display: inline-block;
     line-height: 1.125;
-    margin: 0.5rem 0.3333rem;
+    margin: 0.5rem;
 }
 section > * {
     margin: 0.75rem auto;
